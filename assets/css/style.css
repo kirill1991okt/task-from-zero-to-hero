@@ -263,15 +263,18 @@ img {
   text-align: center;
 }
 
-.education__content {
+.education__content,
+.experience__content {
   display: flex;
 }
 
-.education__time {
+.education__time,
+.experience__time {
   padding-right: 1rem;
 }
 
-.education__rounder {
+.education__rounder,
+.experience__rounder {
   position: relative;
   display: block;
   width: 16px;
@@ -281,7 +284,8 @@ img {
   margin-top: 0.5rem;
 }
 
-.education__line {
+.education__line,
+.experience__line {
   display: block;
   width: 2px;
   height: 110%;
@@ -289,19 +293,70 @@ img {
   transform: translateX(7px);
 }
 
-.education__data {
+.education__data,
+.experience__data {
   gap: 0.5rem;
 }
 
-.education__title {
+.education__title,
+e .experience__title {
   font-size: var(--h3-font-size);
 }
 
-.education__studies {
+.education__studies,
+.experience__company {
   font-size: var(--small-font-size);
   color: var(--title-color);
 }
 
 .education__year {
   font-size: var(--small-font-size);
+}
+
+.skills__content {
+  display: flex;
+}
+
+.languages__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skills__name,
+.languages__name {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--mb-3);
+}
+
+.skills__circle,
+.languages__circle {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  margin-right: 0.75rem;
+}
+
+.certificate__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-1);
+}
+
+.interests__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.interests__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.interests__icon {
+  font-size: 1.5rem;
+  color: var(--text-color-light);
+  margin-bottom: 0.25rem;
 }
