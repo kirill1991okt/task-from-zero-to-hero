@@ -230,12 +230,14 @@ img {
 
 /* переделать картинку с анимацией */
 .home__img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+  width: 170px;
+  height: 170px;
+  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+  border: 5px solid var(--text-color-light);
   justify-self: center;
   object-fit: cover;
   margin-bottom: var(--mb-1);
+  animation: ava-animate 5s infinite alternate;
 }
 
 .home__title {
@@ -455,5 +457,23 @@ e .experience__title {
 
   .languages__content {
     flex-direction: column;
+  }
+}
+
+@keyframes ava-animate {
+  0% {
+    border-radius: 41% 59% 70% 30% / 30% 52% 48% 70%;
+  }
+
+  40% {
+    border-radius: 77% 23% 65% 35% / 59% 67% 33% 41%;
+  }
+
+  80% {
+    border-radius: 44% 56% 32% 68% / 35% 42% 58% 65%;
+  }
+
+  100% {
+    border-radius: 77% 23% 67% 33% / 27% 72% 28% 73%;
   }
 }
