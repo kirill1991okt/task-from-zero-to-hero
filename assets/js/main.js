@@ -25,9 +25,9 @@ function scrollActive() {
   console.log(scrollY);
 
   sections.forEach((current) => {
-    const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 50;
-    sectionId = current.getAttribute('id');
+    const sectionHeight = current.offsetHeight,
+      sectionTop = current.offsetTop - 50,
+      sectionId = current.getAttribute('id');
 
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
       document
@@ -41,3 +41,14 @@ function scrollActive() {
   });
 }
 window.addEventListener('scroll', scrollActive);
+
+function scrollTop() {
+  const scrollTop = document.querySelector('#scroll-top');
+  if (this.scrollY >= 200) {
+    scrollTop.classList.add('show-scroll');
+  } else {
+    scrollTop.classList.remove('show-scroll');
+  }
+}
+
+window.addEventListener('scroll', scrollTop);
