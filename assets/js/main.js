@@ -22,7 +22,6 @@ const sections = document.querySelectorAll('section[id]');
 
 function scrollActive() {
   const scrollY = window.pageYOffset;
-  console.log(scrollY);
 
   sections.forEach((current) => {
     const sectionHeight = current.offsetHeight,
@@ -79,4 +78,75 @@ themeButton.addEventListener('click', () => {
   themeButton.classList.toggle(iconTheme);
   localStorage.setItem('selected-theme', getCurrentTheme());
   localStorage.setItem('selected-icon', getCurrentIcon());
+});
+
+// слайдер
+
+function slider({ slidesSelector, prevArrow, nextArrow, currentId, totalId }) {
+  const slides = document.querySelectorAll(slidesSelector),
+    prev = document.querySelector(prevArrow),
+    next = document.querySelector(nextArrow),
+    current = document.querySelector(currentId),
+    total = document.querySelector(totalId);
+
+  let indexSlide = 1;
+  let index = 0;
+
+  if (slides.length < 10) {
+    total.textContent = `0${slides.length}`;
+  } else {
+    total.textContent = slides.length;
+  }
+
+  showSlides(indexSlide);
+
+  next.addEventListener('click', function () {
+    index++;
+    if (index > slides.length - 1) {
+      index = 0;
+    }
+    slides.forEach((slide) => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+
+    plusSlide(1);
+  });
+
+  prev.addEventListener('click', () => {
+    index--;
+    if (index < 0) {
+      index = slides.length - 1;
+    }
+
+    slides.forEach((slide) => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+    plusSlide(-1);
+  });
+
+  function showSlides(n) {
+    if (n > slides.length) {
+      indexSlide = 1;
+    }
+
+    if (n < 1) {
+      indexSlide = slides.length;
+    }
+
+    if (indexSlide < 10) {
+      current.textContent = `0${indexSlide}`;
+    } else {
+      current.textContent = indexSlide;
+    }
+  }
+
+  function plusSlide(n) {
+    showSlides((indexSlide += n));
+  }
+}
+
+slider({
+  slidesSelector: '.certificate__slide',
+  prevArrow: '.certificate__slider-prev',
+  nextArrow: '.certificate__slider-next',
+  currentId: '#current',
+  totalId: '#total',
 });

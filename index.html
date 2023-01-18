@@ -59,8 +59,8 @@
       <div class="resume" id="area-cv">
         <div class="resume__left">
           <section class="home" id="home">
-            <div class="home__container section bd-grid">
-              <div class="home__data bd-grid">
+            <div class="home__container section">
+              <div class="home__data">
                 <img
                   src="./assets/img/foto-removebg-preview.png"
                   alt="profile"
@@ -71,9 +71,9 @@
                 <!-- Должны быть кнопка таймин 22:36-->
               </div>
 
-              <div class="home__address bd-grid">
+              <div class="home__address">
                 <span class="home__information">
-                  <i class="bx bx-map home__icon"></i>Minsk
+                  <i class="bx bx-map home__icon"></i>Minsk, Belarus
                 </span>
                 <span class="home__information">
                   <i class="bx bx-envelope-open home__icon"></i
@@ -93,7 +93,7 @@
 
           <section class="social section">
             <h2 class="section-title">SOCIAL</h2>
-            <div class="social__container bd-grid">
+            <div class="social__container">
               <a
                 href="https://www.linkedin.com/in/kirill-levkevich/"
                 target="_blank"
@@ -107,6 +107,13 @@
                 class="social__link"
               >
                 <i class="bx bxl-vk social__icon"></i>@kirill
+              </a>
+              <a
+                href="https://www.youtube.com/@my-almagest"
+                target="_blank"
+                class="social__link"
+              >
+                <i class="bx bxl-youtube social__icon"></i>@my-almagest
               </a>
             </div>
           </section>
@@ -127,7 +134,7 @@
                 <span class="education__line"></span>
               </div>
 
-              <div class="education__data bd-grid">
+              <div class="education__data">
                 <h3 class="educatio__title">LOW TEMPERATURE ENGINEERING</h3>
                 <span class="education__studies"
                   >MOGILEV STATE UNIVERSITY OF FOOD TECHNOLOGIES</span
@@ -141,7 +148,7 @@
                 <span class="education__line"></span>
               </div>
 
-              <div class="education__data bd-grid">
+              <div class="education__data">
                 <h3 class="educatio__title">
                   Website development with HTML, CSS & JAVASCRIPT
                 </h3>
@@ -158,7 +165,7 @@
                 <span class="education__line"></span>
               </div>
 
-              <div class="education__data bd-grid">
+              <div class="education__data">
                 <h3 class="educatio__title">
                   JavaScript Web Application Development
                 </h3>
@@ -174,16 +181,19 @@
           <section class="skills section" id="skills">
             <h2 class="section-title">Skills</h2>
 
-            <div class="skills__content bd-grid">
+            <div class="skills__content">
               <ul class="skills__data">
                 <li class="skills__name">
-                  <span class="skills__circle"></span>HTML
+                  <span class="skills__circle"></span>HTML5
                 </li>
                 <li class="skills__name">
-                  <span class="skills__circle"></span>CSS
+                  <span class="skills__circle"></span>CSS3,SCSS
                 </li>
                 <li class="skills__name">
-                  <span class="skills__circle"></span>JavaScript
+                  <span class="skills__circle"></span>ECMAScript 5-7
+                </li>
+                <li class="skills__name">
+                  <span class="skills__circle"></span>REACT
                 </li>
               </ul>
             </div>
@@ -193,52 +203,89 @@
           <section class="experience section" id="experience">
             <h2 class="section-title">Experience</h2>
 
-            <div class="experience__container bd-grid">
+            <div class="experience__container">
               <div class="experience__content">
                 <div class="experience__time">
                   <span class="experience__rounder"></span>
                   <span class="experience__line"></span>
                 </div>
 
-                <div class="experience__data bd-grid">
-                  <h3 class="experience__title">MASTER OF DESIGN</h3>
-                  <span class="experience__company">Tech Soft</span>
+                <div class="experience__data">
+                  <h3 class="experience__title">Student</h3>
+                  <!-- <span class="experience__company">Tech Soft</span> -->
                   <p class="experience__description">
-                    Work in this company dedicating the best responsibility in
-                    the area that corresponds, delivering the best results for
-                    the company and improving productivity.
+                    Unfortunately, at the moment, I haven't had commercial
+                    development experience. Therefore, I suggest you to check
+                    out my projects on
+                    <a href="https://github.com/kirill1991okt?tab=repositories"
+                      >GitHub</a
+                    >
+                    page.
                   </p>
                 </div>
               </div>
             </div>
           </section>
-
+          <!--здесь слайдер-->
           <section class="certificate section" id="certificates">
             <h2 class="section-title">Certificates</h2>
-
-            <div class="certificate__container bg-grid">
-              <div class="certificate__content">
-                <h3 class="certificate__title">IT-Academy</h3>
-                <p class="certificate__description">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Possimus.
-                </p>
+            <!--Сладер-->
+            <div class="certificate__slider">
+              <div class="certificate__slider-counter">
+                <div class="certificate__slider-prev">
+                  <!-- <img src="./assets/img/left.svg" alt="prev" /> -->
+                  <i class="bx bx-left-arrow-alt certificate__icon"></i>
+                </div>
+                <span id="current">01</span>
+                /
+                <span id="total">02</span>
+                <div class="certificate__slider-next">
+                  <!-- <img src="./assets/img/right.svg" alt="next" /> -->
+                  <i class="bx bx-right-arrow-alt certificate__icon"></i>
+                </div>
               </div>
-              <div class="certificate__content">
-                <h3 class="certificate__title">IT-Academy</h3>
-                <p class="certificate__description">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Possimus.
-                </p>
+              <div class="certificate__slider-wrapper">
+                <div class="certificate__slider-inner">
+                  <div class="certificate__slide active">
+                    <img
+                      src="./assets/img/Certificate1.png"
+                      alt="certificate1"
+                    />
+                  </div>
+                  <div class="certificate__slide">
+                    <img
+                      src="./assets/img/Certificate2.jpg"
+                      alt="certificate2"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
-          </section>
+            <!--Сладер-->
 
+            <!-- <div class="certificate__container bg-grid">
+              <div class="certificate__content">
+                <h3 class="certificate__title">IT-Academy</h3>
+                <p class="certificate__description">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Possimus.
+                </p>
+              </div>
+              <div class="certificate__content">
+                <h3 class="certificate__title">IT-Academy</h3>
+                <p class="certificate__description">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Possimus.
+                </p>
+              </div>
+            </div> -->
+          </section>
+          <!--здесь слайдер-->
           <section class="languages section">
             <h2 class="section-title">Languages</h2>
 
             <div class="languages__container">
-              <ul class="languages__content bd-grid">
+              <ul class="languages__content">
                 <li class="languages__name">
                   <span class="languages__circle"></span>Russian
                 </li>
@@ -252,7 +299,7 @@
           <section class="interests section">
             <h2 class="section-title">Interests</h2>
 
-            <div class="interests__container bd-grid">
+            <div class="interests__container">
               <div class="interests__content">
                 <i class="bx bx-headphone interests__icon"></i>
                 <span class="interests__name">Music</span>
