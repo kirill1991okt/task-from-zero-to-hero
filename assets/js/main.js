@@ -80,8 +80,6 @@ themeButton.addEventListener('click', () => {
   localStorage.setItem('selected-icon', getCurrentIcon());
 });
 
-// слайдер
-
 function slider({ slidesSelector, prevArrow, nextArrow, currentId, totalId }) {
   const slides = document.querySelectorAll(slidesSelector),
     prev = document.querySelector(prevArrow),
